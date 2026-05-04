@@ -1,6 +1,6 @@
-from langchain_openai import OpenAI
+from langchain_anthropic import ChatAnthropic
 from dotenv import load_dotenv
 load_dotenv()
-llm=OpenAI(model="gpt-3.5-turbo", temperature=0.9)
+llm=ChatAnthropic(model="claude-2", temperature=0.9)
 ans=llm.invoke("What is the capital of France?",temperature=0.9);
 print(ans.content)
